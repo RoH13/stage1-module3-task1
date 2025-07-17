@@ -9,8 +9,8 @@ public class Generics {
     public <T> List<T> boxingMethod(T name) {
         List<T> firstList = new ArrayList<T>();
         firstList.add(name);
-        List secondList = new ArrayList<T>();
-        secondList.add(firstList);
+        List<T> secondList = new ArrayList<T>();
+        secondList.addAll(firstList);
 
         return secondList;
     }
