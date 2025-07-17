@@ -7,17 +7,17 @@ public class Generics {
 
     //TODO: Refactor Method-1
     public <T> List<T> boxingMethod(T name) {
-        List firstList = new ArrayList<T>();
+        List<T> firstList = new ArrayList<T>();
         firstList.add(name);
         List secondList = new ArrayList<T>();
         secondList.add(firstList);
-        
+
         return secondList;
     }
 
     //TODO: Refactor Method-2
-    public <T> String genericMethod(T data) {
-        return data.getClass().getName();
+    public <T> T genericMethod(T data) {
+        return data;
     }
 
     //TODO: Refactor Method-3
