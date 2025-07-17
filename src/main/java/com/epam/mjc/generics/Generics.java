@@ -7,9 +7,9 @@ public class Generics {
 
     //TODO: Refactor Method-1
     public <T> List<T> boxingMethod(T name) {
-        List<T> firstList = new ArrayList<T>();
+        List<T> firstList = new ArrayList<>();
         firstList.add(name);
-        List<T> secondList = new ArrayList<T>();
+        List<T> secondList = new ArrayList<>();
         secondList.addAll(firstList);
 
         return secondList;
@@ -21,7 +21,7 @@ public class Generics {
     }
 
     //TODO: Refactor Method-3
-    public <T, V extends T> void cloneMethod(List<T> consumer, List<V> producer) {
+    public <T> void cloneMethod(List<T> consumer, List<? extends T> producer) {
         consumer.addAll(producer);
     }
 
